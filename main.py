@@ -1,4 +1,8 @@
 import pygame
+import os
+from subprocess import call
+from threading import Thread
+
 
 #colores
 red = (255, 0, 0)
@@ -29,6 +33,7 @@ while not done:
         if pressed[0] == 1:
                 if posicion[0] > 254 and posicion[0] < 447 and posicion[1] > 115 and posicion[1] < 157:
                         done = True
+                        call(["python", "scenes/test.py"])
 
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
